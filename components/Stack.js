@@ -5,12 +5,12 @@ import { FontAwesome } from "@expo/vector-icons"; // Import FontAwesome icons
 
 const Stack = () => {
   const originalCardData = [
-    { id: 1, backgroundColor: "#fd8a8a" },
-    { id: 2, backgroundColor: "#ffcbcb" },
-    { id: 3, backgroundColor: "#9es1d4" },
-    { id: 4, backgroundColor: "#f1f7b5" },
+    { id: 1, backgroundColor: "#f88a8a" },
+    { id: 2, backgroundColor: "#fbf95e" },
+    { id: 3, backgroundColor: "#ffcbcb" },
+    { id: 4, backgroundColor: "#9ea1d4" },
     { id: 5, backgroundColor: "#a8d1d1" },
-    { id: 6, backgroundColor: "#dfebeb" },
+    { id: 6, backgroundColor: "#dfeb8b" },
     { id: 7, backgroundColor: "#ccb5f0" },
   ];
 
@@ -60,14 +60,13 @@ const Stack = () => {
       }),
       Animated.timing(iconOpacity, {
         toValue: 1,
-        delay: 100,
-        duration: 10,
+        delay: 10,
+        duration: 200,
         useNativeDriver: false,
       }),
     ]).start(() => {
       // Remove the swiped card from the stack
       setCardsData((cards) => {
-        console.log(cards[0].id);
         const prevCards = cards.slice(1);
         const nextCard = originalCardData[cards[0].id + 2];
         if (nextCard) {
@@ -121,7 +120,7 @@ const Stack = () => {
               >
                 <FontAwesome
                   name="check-circle"
-                  size={70}
+                  size={90}
                   color="#0f0"
                   style={styles.icon}
                 />
@@ -132,7 +131,7 @@ const Stack = () => {
               >
                 <FontAwesome
                   name="times-circle"
-                  size={70}
+                  size={90}
                   color="#f00"
                   style={styles.iconRight}
                 />
