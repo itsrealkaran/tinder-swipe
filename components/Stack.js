@@ -1,17 +1,17 @@
 // Stack.js
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { View, StyleSheet, PanResponder, Animated } from "react-native";
 import { FontAwesome } from "@expo/vector-icons"; // Import FontAwesome icons
 
 const Stack = () => {
   const originalCardData = [
-    { id: 1, backgroundColor: "pink" },
-    { id: 2, backgroundColor: "yellow" },
-    { id: 3, backgroundColor: "orange" },
-    { id: 4, backgroundColor: "blue" },
-    { id: 5, backgroundColor: "green" },
-    { id: 6, backgroundColor: "purple" },
-    { id: 7, backgroundColor: "brown" },
+    { id: 1, backgroundColor: "#fd8a8a" },
+    { id: 2, backgroundColor: "#ffcbcb" },
+    { id: 3, backgroundColor: "#9es1d4" },
+    { id: 4, backgroundColor: "#f1f7b5" },
+    { id: 5, backgroundColor: "#a8d1d1" },
+    { id: 6, backgroundColor: "#dfebeb" },
+    { id: 7, backgroundColor: "#ccb5f0" },
   ];
 
   const [cardsData, setCardsData] = useState(originalCardData.slice(0, 3));
@@ -151,8 +151,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   card: {
-    width: "80%",
-    height: "90%",
+    height: "80%",
+    aspectRatio: "9/16",
     position: "absolute",
     overflow: "hidden", // Ensure the icons are within the card boundaries
   },
